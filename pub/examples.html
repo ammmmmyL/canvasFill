@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<!--https://canvasfill.herokuapp.com//-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas Fill</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo2.jpg">
+    <!-- Bootstrap library for formatting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+    <div class="examplePage">
+        <nav class="navbar navbar-light">
+            <a class="navbar-brand" href="index.html">
+                Canvas Fill
+            </a>
+
+            <div class="pagesLink">
+                <a class="nav-link" href="./">Home</a>
+                <a class="nav-link active" href="./examples">Examples</a>
+                <a class="nav-link" href="./documentation">Documentation</a>
+                <a class="nav-link" href="https://github.com/csc309-winter-2021/js-library-liyu42">Github</a>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <span class="heading">Examples</span>
+            </div>
+
+            <!-- Original Image -->
+            <div class="row">
+                <h3>Original Picture</h3>
+            </div>
+            <div class="row orginal">
+                <div class="col-6">
+                    <img class="originalImg" src="img/strawberry.jpg">
+                </div>
+                <div class="col-6">
+                    <p id="caption">"My perfect last meal would be: shrimp cocktail, lasagna, steak, creamed spinach, salad with bleu cheese dressing, onion rings, garlic bread, and a dessert of strawberry shortcake."</p>
+                </div>
+            </div>
+            <div class="row">
+                <strong class="font-italic">The library will arrange the image and caption for you as ease, with the style you choose</strong>
+            </div>
+
+            <hr class="separate" />
+
+            <!-- Image 1 -->
+            <div class="row">
+                <h3>Split Effect</h3>
+            </div>
+            <div class="row">
+                <div class="examples">
+                    <div id="splitExample"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="codeSample">
+                    <code>
+                        // object structure <br>
+                        const splitImage = { <br>
+                        &#160&#160&#160&#160 CreateSplitImage, <br>
+                        &#160&#160&#160&#160 fontStyle: "Helvetica", <br>
+                        &#160&#160&#160&#160 fontColor: "black", <br>
+                        &#160&#160&#160&#160 textBackground: "#ffffff00" <br>
+                        } <br>
+                        // calling function <br>
+                        const split = splitImage.CreateSplitImage(img, caption, width=500, height=500, left=0.7, right=0.3)
+                    </code>
+                </div>
+            </div>
+            <hr class="separate" />
+
+            <!-- Image 2 -->
+            <div class="row">
+                <h3>Circle Click On Effect</h3>
+            </div>
+            <div class="row">
+                <div class="examples">
+                    <div id="circleExample"></div>
+                    <span>Click Me</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="codeSample">
+                    <code>
+                        // object structure <br>
+                        const shapeImage = { <br>
+                        &#160&#160&#160&#160 CreateCircleImage, <br>
+                        &#160&#160&#160&#160 CreateCircleImage2, <br>
+                        &#160&#160&#160&#160 fontStyle: "Helvetica", <br>
+                        &#160&#160&#160&#160 fontColor: "black", <br>
+                        &#160&#160&#160&#160 textBackground: "white" <br>
+                        } <br>
+                        // calling function <br>
+                        shapeImage.textBackground = "#D2D2D2" <br>
+                        const circle = shapeImage.CreateCircleImage(original_img, caption, width=500, height=500)
+                    </code>
+                </div>
+            </div>
+
+            <!-- Image 7 -->
+            <div class="row">
+                <h3>Circular Caption Effect</h3>
+            </div>
+            
+            <div class="row">
+                <div class="examples">
+                    <div id="circularExample"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="codeSample">
+                    <code>
+                        // calling function <br>
+                        shapeImage.textBackground = "#ffffff00" <br>
+                        const circular = shapeImage.CreateCircleImage2(original_img, caption, width=700, height=300)
+                    </code>
+                </div>
+            </div>
+            <hr class="separate" />
+
+            <!-- Image 3 -->
+            <div class="row">
+                <h3>Overlay Effect - Style1</h3>
+            </div>
+            <div class="row">
+                <div class="examples">
+                    <div id="overlayExample1"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="codeSample">
+                    <code>
+                        // object structure <br>
+                        const overlayImage = { <br>
+                        &#160&#160&#160&#160 CreateCaptionOverlay, <br>
+                        &#160&#160&#160&#160 CreateCaptionOverlay2, <br>
+                        &#160&#160&#160&#160 CreateCaptionOverlay3, <br>
+                        &#160&#160&#160&#160 fontSize: "16px", <br>
+                        &#160&#160&#160&#160 fontStyle: "Helvetica", <br>
+                        &#160&#160&#160&#160 fontColor: "black", <br>
+                        &#160&#160&#160&#160 backgroundColor: "#ffffff" <br>
+                        } <br>
+                        // calling function <br>
+                        overlayImage.backgroundColor = "#D5A5A7" <br>
+                        const overlay1 = overlayImage.CreateCaptionOverlay(img, caption, width=700, height=500)
+                    </code>
+                </div>
+            </div>
+
+            <!-- Image 4 -->
+            <div class="row">
+                <h3>Overlay Effect - Style2</h3>
+            </div>
+            <div class="row">
+                <div class="examples">
+                    <div id="overlayExample2"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="codeSample">
+                    <code>
+                        // calling function <br>
+                        overlayImage.backgroundColor = "#D5A5A7" <br>
+                        const overlay2 = overlayImage.CreateCaptionOverlay2(img, caption, width=700, height=500, position="left")
+                    </code>
+                </div>
+            </div>
+
+            <!-- Image 6 -->
+            <div class="row">
+                <h3>Overlay Effect - Style3</h3>
+            </div>
+            <div class="row">
+                <div class="examples">
+                    <div id="overlayExample3"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="codeSample">
+                    <code>
+                        // calling function <br>
+                        const overlay3 = overlayImage.CreateCaptionOverlay3(img, caption, width=700, height=500, position="left")
+                    </code>
+                </div>
+            </div>
+
+            <hr class="separate" />
+
+            <!-- Image 5 -->
+            <div class="row">
+                <h3>Join Effect</h3>
+            </div>
+            <div class="row">
+                <div class="examples">
+                    <div id="joinExample"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="codeSample">
+                    <code>
+                        // object structure <br>
+                        const joinImage = { <br>
+                        &#160&#160&#160&#160 CreateCircleInMiddle, <br>
+                        &#160&#160&#160&#160 fontStyle: "Helvetica", <br>
+                        &#160&#160&#160&#160 fontColor: "black", <br>
+                        &#160&#160&#160&#160 backgroundColor: "#ffffff" <br>
+                        &#160&#160&#160&#160 circleColor: "#99ced3", <br>
+                        } <br>
+                        // calling function <br>
+                        joinImage.backgroundColor = "#D5A5A7" <br>
+                        joinImage.circleColor = "#a5bdd6dd" <br>
+                        const circleJoin1 = joinImage.CreateCircleInMiddle(img, caption, width=700, height=400, orientation="vertical")
+                    </code>
+                </div>
+            </div>
+            <div class="row">
+                <div class="examples">
+                    <div id="joinExample2"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="codeSample">
+                    <code>
+                        // calling function <br>
+                        joinImage.backgroundColor = "#5f6366dd" <br>
+                        joinImage.circleColor = "#D5A5A7cd" <br>
+                        const circleJoin2 = joinImage.CreateCircleInMiddle(img, caption, width=400, height=700, orientation="horizontal")
+                    </code>
+                </div>
+            </div>
+            <hr class="separate" />
+
+        </div>
+
+        <div class="exampleFooter">
+            <span class="font-weight-light">Using Vanilla Javascript and DOM Manipulation</span>
+            <br>
+            <span class="font-weight-light">Created by Yu Qing Li @ CSC309 2021</span>
+        </div>
+    </div>
+
+    <!-- Library file -->
+    <script type="text/javascript" src='./js/CanvasFill.js'></script>
+    <!-- Library usage script -->
+    <script type="text/javascript" src='./js/examples.js'></script>
+    <!-- Bootstrap related scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

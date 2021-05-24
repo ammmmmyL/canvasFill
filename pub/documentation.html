@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<!--https://canvasfill.herokuapp.com//-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas Fill</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo2.jpg">
+    <!-- Bootstrap library for formatting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+    <div class="examplePage">
+        <nav class="navbar navbar-light">
+            <a class="navbar-brand" href="index.html">
+                Canvas Fill
+            </a>
+
+            <div class="pagesLink">
+                <a class="nav-link" href="./">Home</a>
+                <a class="nav-link" href="./examples">Examples</a>
+                <a class="nav-link active" href="./documentation">Documentation</a>
+                <a class="nav-link" href="https://github.com/csc309-winter-2021/js-library-liyu42">Github</a>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <span class="heading">Get Started</span>
+            </div>
+
+            <div>
+                <p class="intro">
+                    Fill Up empty blocks on your website with a few lines of code. No more time needed to spend on the tedious process
+                    of adjucting the positions and values of various Html and CSS elements. Start using the library today by simply include the following file.
+                    The returned elements will be styles series of node elements that can be directly added as a child node. You can also add additional styles 
+                    to individual elements.
+                </p>
+            </div>
+
+            <div>
+                <code>
+                    &#160&#160&#160&#60 !-- JS Library script --&#62
+                </code>
+            </div>
+
+            <div class="getStarted">
+                <code>
+                    &#60script type="text/javascript" src='./js/CanvasFill.js'&#62
+                    &#60script /&#62
+                </code>
+            </div>
+
+            <hr class="separate" />
+
+            <div class="row">
+                <span class="heading">API Specifications</span>
+            </div>
+
+            <div>
+                <strong class="objectTitle">Object Declaration</strong>
+            </div>
+
+            <div class="row">
+
+                <div class="object">
+                    <code>
+                        const splitImage = { <br>
+                        &#160&#160&#160&#160 CreateSplitImage, <br>
+                        &#160&#160&#160&#160 fontStyle: "Helvetica", <br>
+                        &#160&#160&#160&#160 fontColor: "black", <br>
+                        &#160&#160&#160&#160 textBackground: "#ffffff00" <br>
+                        }
+                    </code>
+                </div>
+
+                <div class="apiLine">
+                    <code>
+                        splitImage.CreateSplitImage(img, caption, width, height, left, right)
+                    </code>
+                </div>
+
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Property</th>
+                            <th scope="col">Default</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">img</th>
+                            <td>null</td>
+                            <td>image</td>
+                            <td>The image you want to style</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">caption</th>
+                            <td>null</td>
+                            <td>string</td>
+                            <td>The caption you want to style</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">width</th>
+                            <td>null</td>
+                            <td>number</td>
+                            <td>The width of the canvas you want to style in px</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">height</th>
+                            <td>null</td>
+                            <td>number</td>
+                            <td>The height of the canvas you want to style in px</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">left</th>
+                            <td>null</td>
+                            <td>number</td>
+                            <td>The left split size the image in decimal [0 - 1]</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">right</th>
+                            <td>null</td>
+                            <td>number</td>
+                            <td>The right split size the image in decimal [0 - 1]</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">fontStyle</th>
+                            <td>Helvetica</td>
+                            <td>string</td>
+                            <td>Font family style you want to apply to the caption</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">fontColor</th>
+                            <td>black</td>
+                            <td>string</td>
+                            <td>Font color you want to apply to the caption</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">textBackground</th>
+                            <td>#ffffff00</td>
+                            <td>string</td>
+                            <td>Background color you want to apply to the caption, default is transparent</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr class="separate" />
+
+            <div>
+                <strong class="objectTitle">Object Declaration</strong>
+            </div>
+
+            <div class="row">
+
+                <div class="object">
+                    <code>
+                        const shapeImage = { <br>
+                        &#160&#160&#160&#160 CreateCircleImage, <br>
+                        &#160&#160&#160&#160 CreateCircleImage2, <br>
+                        &#160&#160&#160&#160 fontStyle: "Helvetica", <br>
+                        &#160&#160&#160&#160 fontColor: "black", <br>
+                        &#160&#160&#160&#160 textBackground: "white" <br>
+                        } <br>
+                    </code>
+                </div>
+                <div class="apiLine">
+                    <code>
+                        shapeImage.CreateCircleImage(img, caption, width, height)
+                    </code>
+                </div>
+                <br>
+
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Property</th>
+                            <th scope="col">Default</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">img</th>
+                            <td>null</td>
+                            <td>image</td>
+                            <td>The image you want to style</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">caption</th>
+                            <td>null</td>
+                            <td>string</td>
+                            <td>The caption you want to style</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">width</th>
+                            <td>null</td>
+                            <td>number</td>
+                            <td>The width of the canvas you want to style in px</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">height</th>
+                            <td>null</td>
+                            <td>number</td>
+                            <td>The height of the canvas you want to style in px</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">fontStyle</th>
+                            <td>Helvetica</td>
+                            <td>string</td>
+                            <td>Font family style you want to apply to the caption</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">fontColor</th>
+                            <td>black</td>
+                            <td>string</td>
+                            <td>Font color you want to apply to the caption</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">textBackground</th>
+                            <td>white</td>
+                            <td>string</td>
+                            <td>Background color you want to apply to the caption</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <br>
+                <div class="apiLine">
+                    <code>
+                        shapeImage.CreateCircleImage2(img, caption, width, height)
+                    </code>
+                </div>
+                <br>
+
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Property</th>
+                            <th scope="col">Default</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">img</th>
+                            <td>null</td>
+                            <td>image</td>
+                            <td>The image you want to style</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">caption</th>
+                            <td>null</td>
+                            <td>string</td>
+                            <td>The caption you want to style</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">width</th>
+                            <td>null</td>
+                            <td>number</td>
+                            <td>The width of the canvas you want to style in px</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">height</th>
+                            <td>null</td>
+                            <td>number</td>
+                            <td>The height of the canvas you want to style in px, also the radius of the circular image</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">fontStyle</th>
+                            <td>Helvetica</td>
+                            <td>string</td>
+                            <td>Font family style you want to apply to the caption</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">fontColor</th>
+                            <td>black</td>
+                            <td>string</td>
+                            <td>Font color you want to apply to the caption</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">textBackground</th>
+                            <td>white</td>
+                            <td>string</td>
+                            <td>Background color you want to apply to the caption</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr class="separate" />
+
+            <div>
+                <strong class="objectTitle">Object Declaration</strong>
+            </div>
+            <div class="row">
+                <div class="object">
+                    <code>
+                        const overlayImage = { <br>
+                        &#160&#160&#160&#160 CreateCaptionOverlay, <br>
+                        &#160&#160&#160&#160 CreateCaptionOverlay2, <br>
+                        &#160&#160&#160&#160 CreateCaptionOverlay3, <br>
+                        &#160&#160&#160&#160 fontSize: "16px", <br>
+                        &#160&#160&#160&#160 fontStyle: "Helvetica", <br>
+                        &#160&#160&#160&#160 fontColor: "black", <br>
+                        &#160&#160&#160&#160 backgroundColor: "#ffffff" <br>
+                        } <br>
+                    </code>
+                </div>
+                <div class="apiLine">
+                    <code>
+                        overlayImage.CreateCaptionOverlay(img, caption, width, height)
+                    </code>
+                </div>
+                <br>
+
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Property</th>
+                            <th scope="col">Default</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">img</th>
+                            <td>null</td>
+                            <td>image</td>
+                            <td>The image you want to style</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">caption</th>
+                            <td>null</td>
+                            <td>string</td>
+                            <td>The caption you want to style</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">width</th>
+                            <td>null</td>
+                            <td>number</td>
+                            <td>The width of the canvas you want to style in px</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">height</th>
+                            <td>null</td>
+                            <td>number</td>
+                            <td>The height of the canvas you want to style in px</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">fontSize</th>
+                            <td>16px</td>
+                            <td>string</td>
+                            <td>Font size you want to apply to the caption</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">fontStyle</th>
+                            <td>Helvetica</td>
+                            <td>string</td>
+                            <td>Font family style you want to apply to the caption</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">fontColor</th>
+                            <td>black</td>
+                            <td>string</td>
+                            <td>Font color you want to apply to the caption</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">backgroundColor</th>
+                            <td>#ffffff</td>
+                            <td>string</td>
+                            <td>Background color you want to apply to the canvas</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="apiLine">
+                    <code>
+                        overlayImage.CreateCaptionOverlay2(img, caption, width, height, position)
+                    </code>
+                </div>
+                <br>
+
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Property</th>
+                            <th scope="col">Default</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">img</th>
+                            <td>null</td>
+                            <td>image</td>
+                            <td>The image you want to style</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">caption</th>
+                            <td>null</td>
+                            <td>string</td>
+                            <td>The caption you want to style</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">width</th>
+                            <td>null</td>
+                            <td>number</td>
+                            <td>The width of the canvas you want to style in px</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">height</th>
+                            <td>null</td>
+                            <td>number</td>
+                            <td>The height of the canvas you want to style in px</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">position</th>
+                            <td>right</td>
+                            <td>string</td>
+                            <td>Position of where you want the textbox to be, either left or right</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">fontSize</th>
+                            <td>16px</td>
+                            <td>string</td>
+                            <td>Font size you want to apply to the caption</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">fontStyle</th>
+                            <td>Helvetica</td>
+                            <td>string</td>
+                            <td>Font family style you want to apply to the caption</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">fontColor</th>
+                            <td>black</td>
+                            <td>string</td>
+                            <td>Font color you want to apply to the caption</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">backgroundColor</th>
+                            <td>#ffffff</td>
+                            <td>string</td>
+                            <td>Background color you want to apply to the caption, must be in HEX code</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="apiLine">
+                    <code>
+                        overlayImage.CreateCaptionOverlay3(img, caption, width, height, position)
+                    </code>
+                </div>
+                <br>
+
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Property</th>
+                            <th scope="col">Default</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">img</th>
+                            <td>null</td>
+                            <td>image</td>
+                            <td>The image you want to style</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">caption</th>
+                            <td>null</td>
+                            <td>string</td>
+                            <td>The caption you want to style</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">width</th>
+                            <td>null</td>
+                            <td>number</td>
+                            <td>The width of the canvas you want to style in px</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">height</th>
+                            <td>null</td>
+                            <td>number</td>
+                            <td>The height of the canvas you want to style in px</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">position</th>
+                            <td>right</td>
+                            <td>string</td>
+                            <td>Position of where you want the textbox to be, either left or right</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">fontSize</th>
+                            <td>16px</td>
+                            <td>string</td>
+                            <td>Font size you want to apply to the caption</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">fontStyle</th>
+                            <td>Helvetica</td>
+                            <td>string</td>
+                            <td>Font family style you want to apply to the caption</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">fontColor</th>
+                            <td>black</td>
+                            <td>string</td>
+                            <td>Font color you want to apply to the caption</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">backgroundColor</th>
+                            <td>#ffffff</td>
+                            <td>string</td>
+                            <td>Background color you want to apply to the caption, must be in HEX code</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr class="separate" />
+
+            <div>
+                <strong class="objectTitle">Object Declaration</strong>
+            </div>
+
+            <div class="row">
+
+                <div class="object">
+                    <code>
+                        const joinImage = { <br>
+                        &#160&#160&#160&#160 CreateCircleInMiddle, <br>
+                        &#160&#160&#160&#160 fontStyle: "Helvetica", <br>
+                        &#160&#160&#160&#160 fontColor: "black", <br>
+                        &#160&#160&#160&#160 backgroundColor: "#ffffff" <br>
+                        &#160&#160&#160&#160 circleColor: "#99ced3", <br>
+                        } <br>
+                    </code>
+                </div>
+                <div class="apiLine">
+                    <code>
+                        joinImage.CreateCircleInMiddle(img, caption, width, height, orientation)
+                    </code>
+                </div>
+                <br>
+
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Property</th>
+                            <th scope="col">Default</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">img</th>
+                            <td>null</td>
+                            <td>image</td>
+                            <td>The image you want to style</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">caption</th>
+                            <td>null</td>
+                            <td>string</td>
+                            <td>The caption you want to style</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">width</th>
+                            <td>null</td>
+                            <td>number</td>
+                            <td>The width of the canvas you want to style in px</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">height</th>
+                            <td>null</td>
+                            <td>number</td>
+                            <td>The height of the canvas you want to style in px</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">orientation</th>
+                            <td>horizontal</td>
+                            <td>string</td>
+                            <td>Whether you want the joined image&caption in horizontal or vertical orientation</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">fontStyle</th>
+                            <td>Helvetica</td>
+                            <td>string</td>
+                            <td>Font family style you want to apply to the caption</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">fontColor</th>
+                            <td>black</td>
+                            <td>string</td>
+                            <td>Font color you want to apply to the caption</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">backgroundColor</th>
+                            <td>#ffffff</td>
+                            <td>string</td>
+                            <td>Background color you want to apply to the caption</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">circleColor</th>
+                            <td>#99ced3</td>
+                            <td>string</td>
+                            <td>Color you want to apply to the middle circle</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="exampleFooter">
+            <span class="font-weight-light">Using Vanilla Javascript and DOM Manipulation</span>
+            <br>
+            <span class="font-weight-light">Created by Yu Qing Li @ CSC309 2021</span>
+        </div>
+    </div>
+
+    <!-- Library file -->
+    <script type="text/javascript" src='./js/CanvasFill.js'></script>
+    <!-- Library usage script -->
+    <!--<script type="text/javascript" src='./js/examples.js'></script>-->
+    <!-- Bootstrap related scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
